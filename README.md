@@ -6,13 +6,12 @@ This project focuses on predicting cinema attendance based on historical data an
 - Programming Language: Python
 - Frameworks/Libraries: Pandas, NumPy, Scikit-Learn, TensorFlow/Keras
 - Dataset: Five years of cinema data (local CSV), enriched via API
-- Objective: Predict the total number of attendees (column `TOT`) for a given movie screening
+- Objective: Predict the total number of attendees (column `total`) for a given movie screening
 
 ## Project Structure
 
 - `data/`: Contains the raw CSV file and scripts for API-based enrichment
-- `notebooks/`: Jupyter Notebooks used for exploratory analysis and prototyping
-- `src/`: Modular Python scripts for data loading, preprocessing, modeling, and inference
+- `scripts/`: Jupyter Notebooks for data loading, preprocessing, modeling, and inference
 - `models/`: Saved trained models (e.g., .pkl, .h5)
 - `README.md`: Project documentation
 - `requirements.txt`: Required dependencies
