@@ -1,45 +1,60 @@
 # cinema-prediction-ML
-# 🎬 Cinema Attendance Predictor
+This project focuses on predicting cinema attendance based on historical data and movie metadata collected via The Movie Database (TMDb) API. It is part of a broader initiative to apply machine learning techniques to real-world forecasting problems.
 
-This project uses machine learning models to **predict cinema attendance** (TOT) based on historical and metadata about movies.
+## Project Overview
 
-## 🚀 Project Overview
+- Programming Language: Python
+- Frameworks/Libraries: Pandas, NumPy, Scikit-Learn, TensorFlow/Keras
+- Dataset: Five years of cinema data (local CSV), enriched via API
+- Objective: Predict the total number of attendees (column `TOT`) for a given movie screening
 
-- Language: Python
-- Models: Random Forest, Neural Network (Keras/Tensorflow)
-- Dataset: Custom dataset from 5 years of cinema logs (df.csv)
-- Goal: Predict the number of people that will attend a movie based on features like runtime, genre, release date, and metadata from TMDb API.
+## Project Structure
 
-## 🧱 Project Structure
+- `data/`: Contains the raw CSV file and scripts for API-based enrichment
+- `notebooks/`: Jupyter Notebooks used for exploratory analysis and prototyping
+- `src/`: Modular Python scripts for data loading, preprocessing, modeling, and inference
+- `models/`: Saved trained models (e.g., .pkl, .h5)
+- `README.md`: Project documentation
+- `requirements.txt`: Required dependencies
 
-- `src/`: Python scripts for loading data, training models, and making predictions
-- `notebooks/`: Jupyter Notebook for EDA and prototyping
-- `models/`: Trained models
-- `data/`: Input data (not the full dataset due to size/privacy)
+## Machine Learning Pipeline
 
-## 🧠 Machine Learning Pipeline
+1. **Data Preparation**
+   - Convert `total` column to numeric and drop missing values
+   - Select relevant numerical features
+   - Apply one-hot encoding for categorical variables (e.g., weekday)
 
-- **Data Cleaning**: handling missing values, encoding categorical features
-- **Feature Engineering**: one-hot encoding of `weekday`, scaling
-- **Modeling**: trained and compared Random Forest and Neural Network
-- **Evaluation**: R², RMSE, visualizations of prediction vs real
+2. **Modeling**
+   - Train/test split with `train_test_split`
+   - Model 1: Random Forest Regressor
+   - Model 2: Neural Network (Keras Sequential API)
+   - Evaluation Metrics: Mean Squared Error (MSE), R² Score
 
-## 🔍 Skills Highlighted
+3. **Execution**
+   - Models can be trained and evaluated via modular scripts
+   - Output includes performance plots and predictions vs ground truth
 
-- Python (Pandas, NumPy, Scikit-Learn, TensorFlow/Keras)
-- API usage (TMDb API for metadata)
-- Model evaluation and tuning
-- Code modularization and pipeline separation
-- Git & GitHub project organization
+## Key Skills Demonstrated
 
-## 📊 Example Results
+- Data cleaning and transformation
+- Use of REST APIs for data enrichment
+- Training and evaluation of machine learning models
+- Modular Python code design
+- Use of Jupyter Notebooks for analysis
+- Git/GitHub project organization and documentation
 
-> Include here a plot or table comparing real vs predicted values
-
-## 🛠 How to Run
+## How to Run
 
 ```bash
+git clone https://github.com/yourusername/cinema-attendance-predictor.git
+cd cinema-attendance-predictor
 pip install -r requirements.txt
+
+# Step 1: Prepare data
 python src/data_loader.py
+
+# Step 2: Train model
 python src/model.py
+
+# Step 3: Make predictions
 python src/predict.py
