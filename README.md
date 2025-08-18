@@ -1,59 +1,54 @@
-# cinema-prediction-ML
-This project focuses on predicting cinema attendance based on historical data and movie metadata collected via The Movie Database (TMDb) API. It is part of a broader initiative to apply machine learning techniques to real-world forecasting problems.
+# Project CineSense: A Machine Learning Application
 
-## Project Overview
+This repository documents the development journey of CineSense, a machine learning project focused on predicting cinema attendance based on historical data and movie metadata collected via The Movie Database (TMDb) API.
 
-- Programming Language: Python
-- Frameworks/Libraries: Pandas, NumPy, Scikit-Learn, TensorFlow/Keras
-- Dataset: Five years of cinema data (local CSV), enriched via API
-- Objective: Predict the total number of attendees (column `total`) for a given movie screening
+## Project Journey & Purpose
 
-## Project Structure
+This project began as a self-learning exercise to deepen my practical skills in machine learning and data analysis.
 
-- `data/`: Contains the raw CSV file and scripts for API-based enrichment
-- `scripts/`: Jupyter Notebooks for data loading, preprocessing, modeling, and inference
-- `models/`: Saved trained models (e.g., .pkl, .h5)
-- `README.md`: Project documentation
-- `requirements.txt`: Required dependencies
+1.  **Initial Version:** The first iteration of the code, which I developed with the assistance of AI tools, can be found in the [`1_my_initial_version/`](./1_my_initial_version/) directory. This version represents my initial approach to solving the problem.
 
-## Machine Learning Pipeline
+2.  **Professional Collaboration & Integration:** To benchmark my work against professional standards and learn advanced best practices, I collaborated with an external developer. The more robust and refactored code provided by the developer, which I have subsequently studied and integrated into a Jupyter environment, is located in the [`2_professional_integration/`](./2_professional_integration/) directory.
 
-1. **Data Preparation**
-   - Convert `total` column to numeric and drop missing values
-   - Select relevant numerical features
-   - Apply one-hot encoding for categorical variables (e.g., weekday)
+My primary role in this second phase was to define the problem, integrate the new code, and analyze its structure and methods to learn from a professional workflow.
 
-2. **Modeling**
-   - Train/test split with `train_test_split`
-   - Model 1: Random Forest Regressor
-   - Model 2: Neural Network (Keras Sequential API)
-   - Evaluation Metrics: Mean Squared Error (MSE), R² Score
+## My Contributions & Key Learnings
+* **Project Initiation & Scoping:** Defined the project goals and initial data exploration.
+* **Initial Prototyping:** Developed the first functional model.
+* **Code Integration & Analysis:** Integrated the professionally written code into a Jupyter Lab environment for analysis and learning.
+* **Key Skills Applied:** Data Preprocessing, Feature Engineering, Model Evaluation, Python (Pandas, Scikit-learn, TensorFlow/Keras).
 
-3. **Execution**
-   - Models can be trained and evaluated via modular scripts
-   - Output includes performance plots and predictions vs ground truth
+---
 
-## Key Skills Demonstrated
+## Technical Overview
 
-- Data cleaning and transformation
-- Use of REST APIs for data enrichment
-- Training and evaluation of machine learning models
-- Modular Python code design
-- Use of Jupyter Notebooks for analysis
-- Git/GitHub project organization and documentation
+* **Programming Language:** Python
+* **Frameworks/Libraries:** Pandas, NumPy, Scikit-Learn, TensorFlow/Keras
+* **Dataset:** Five years of cinema data (local CSV), enriched via TMDb API
+* **Objective:** Predict the total number of attendees (`total` column) for a given movie screening.
 
-## How to Run
+### Machine Learning Pipeline
+
+1.  **Data Preparation**
+    * Convert `total` column to numeric and handle missing values.
+    * Select relevant numerical and categorical features.
+    * Apply one-hot encoding for categorical variables (e.g., weekday).
+
+2.  **Modeling**
+    * Train/test split with `train_test_split`.
+    * **Model 1:** Random Forest Regressor
+    * **Model 2:** Neural Network (Keras Sequential API)
+    * **Evaluation Metrics:** Mean Squared Error (MSE), R² Score
+
+### How to Run
 
 ```bash
-git clone https://github.com/yourusername/cinema-attendance-predictor.git
-cd cinema-attendance-predictor
+# Clone the repository
+git clone [https://github.com/fabianimarco98/CineSense.git](https://github.com/fabianimarco98/CineSense.git)
+cd CineSense
+
+# Install dependencies
 pip install -r requirements.txt
 
-# Step 1: Prepare data
-python src/data_loader.py
-
-# Step 2: Train model
-python src/model.py
-
-# Step 3: Make predictions
-python src/predict.py
+# (Instructions for running scripts from the '2_professional_integration' folder)
+# ...
