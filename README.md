@@ -1,30 +1,31 @@
 # Project CineSense: A Machine Learning Application
 
-This repository documents the development journey of CineSense, a machine learning project focused on predicting cinema attendance based on historical data and movie metadata collected via The Movie Database (TMDb) API.
+This repository documents the development journey of CineSense, a machine learning project focused on predicting cinema attendance based on historical data and movie metadata collected via The Movie Database (TMDb) and weather APIs.
 
 ## Project Journey & Purpose
 
-This project began as a self-learning exercise to deepen my practical skills in machine learning and data analysis.
+This project began as a self-learning exercise to deepen my practical skills in machine learning and data analysis. The development is structured in three main phases:
 
-1.  **Initial Version:** The first iteration of the code, which I developed with the assistance of AI tools, can be found in the [`1_my_initial_version/`](./1_my_initial_version/) directory. This version represents my initial approach to solving the problem.
+1.  **Initial Prototype:** The first iteration of the code, which I developed with the assistance of AI tools, can be found in the [`1_initial_prototype/`](./1_initial_prototype/) directory. This version represents my initial approach to data processing and modeling.
 
-2.  **Professional Collaboration & Integration:** To benchmark my work against professional standards and learn advanced best practices, I collaborated with an external developer. The more robust and refactored code provided by the developer, which I have subsequently studied and integrated into a Jupyter environment, is located in the [`2_professional_integration/`](./2_professional_integration/) directory.
+2.  **Professional Collaboration & Refactor:** To benchmark my work against professional standards and learn advanced best practices, I collaborated with professional developer **Luigi Deidda**. His more robust and modular version of the code, which served as a crucial learning benchmark, is located in the [`2_professional_refactor/`](./2_professional_refactor/) directory.
 
-My primary role in this second phase was to define the problem, integrate the new code, and analyze its structure and methods to learn from a professional workflow.
+3.  **My Further Work & Analysis:** Building on the professional codebase, I continued the project's development. My work, found in the [`3_my_further_work/`](./3_my_further_work/) directory, involved refactoring the scripts into a Jupyter Notebook environment for enhanced readability and interactive analysis. I also implemented a deep learning model using Ludwig (a PyTorch-based library) to explore more complex, non-linear relationships in the data.
 
 ## My Contributions & Key Learnings
 * **Project Initiation & Scoping:** Defined the project goals and initial data exploration.
-* **Initial Prototyping:** Developed the first functional model.
+* **Initial Prototyping:** Developed the first functional model using Scikit-learn.
 * **Code Integration & Analysis:** Integrated the professionally written code into a Jupyter Lab environment for analysis and learning.
-* **Key Skills Applied:** Data Preprocessing, Feature Engineering, Model Evaluation, Python (Pandas, Scikit-learn, TensorFlow/Keras).
+* **Model Expansion:** Implemented and tested a deep learning model using Ludwig (PyTorch) to improve predictive performance.
+* **Key Skills Applied:** Data Preprocessing, Feature Engineering, Model Evaluation, Python (Pandas, Scikit-learn, TensorFlow/Keras, PyTorch/Ludwig).
 
 ---
 
 ## Technical Overview
 
 * **Programming Language:** Python
-* **Frameworks/Libraries:** Pandas, NumPy, Scikit-Learn, TensorFlow/Keras
-* **Dataset:** Five years of cinema data (local CSV), enriched via TMDb API
+* **Frameworks/Libraries:** Pandas, NumPy, Scikit-Learn, TensorFlow/Keras, Ludwig (PyTorch)
+* **Dataset:** Five years of cinema data (local CSV), enriched via TMDb and weather APIs.
 * **Objective:** Predict the total number of attendees (`total` column) for a given movie screening.
 
 ### Machine Learning Pipeline
@@ -38,6 +39,7 @@ My primary role in this second phase was to define the problem, integrate the ne
     * Train/test split with `train_test_split`.
     * **Model 1:** Random Forest Regressor
     * **Model 2:** Neural Network (Keras Sequential API)
+    * **Model 3:** Deep Learning Model (Ludwig/PyTorch)
     * **Evaluation Metrics:** Mean Squared Error (MSE), R² Score
 
 ### How to Run
@@ -50,5 +52,4 @@ cd CineSense
 # Install dependencies
 pip install -r requirements.txt
 
-# (Instructions for running scripts from the '2_professional_integration' folder)
-# ...
+# Instructions for running scripts are available within each project folder.
