@@ -9,8 +9,10 @@ This project began as a self-learning exercise to deepen my practical skills in 
 1.  **Initial Prototype:** The first iteration of the code, which I developed with the assistance of AI tools, can be found in the [`1_initial_prototype/`](./1_initial_prototype/) directory. This version represents my initial approach to data processing and modeling.
 
 2.  **Professional Collaboration & Refactor:** To benchmark my work against professional standards and learn advanced best practices, I collaborated with professional developer **Luigi Deidda**. His more robust and modular version of the code, which served as a crucial learning benchmark, is located in the [`2_professional_refactor/`](./2_professional_refactor/) directory.
+### Attribution
+The code within the 2_professional_refactor directory was developed by Luigi Deidda as part of a professional collaboration. His original repository can be found here. My contribution was the integration and analysis of his code, as well as the development of the initial prototype and all subsequent work in the 3_my_further_work directory.
 
-3.  **My Further Work & Analysis:** Building on the professional codebase, I continued the project's development. My work, found in the [`3_my_further_work/`](./3_my_further_work/) directory, involved refactoring the scripts into a Jupyter Notebook environment for enhanced readability and interactive analysis. I also implemented a deep learning model using Ludwig (a PyTorch-based library) to explore more complex, non-linear relationships in the data.
+4.  **My Further Work & Analysis:** Building on the professional codebase, I continued the project's development. My work, found in the [`3_my_further_work/`](./3_my_further_work/) directory, involved refactoring the scripts into a Jupyter Notebook environment for enhanced readability and interactive analysis. I also implemented a deep learning model using Ludwig (a PyTorch-based library) to explore more complex, non-linear relationships in the data.
 
 ## My Contributions & Key Learnings
 * **Project Initiation & Scoping:** Defined the project goals and initial data exploration.
