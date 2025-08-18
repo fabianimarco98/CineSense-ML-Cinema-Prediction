@@ -1,0 +1,70 @@
+# =======================================================
+# File di Configurazione Ludwig per Previsione Incassi Cinema
+# Salva questo contenuto in un file, ad esempio "config.yaml"
+# =======================================================
+
+preprocessing:
+    split_strategy: random
+    split_probabilities: [0.7, 0.15, 0.15] # 70% train, 15% validation, 15% test
+
+
+input_features:
+    # --- Features legate alla data e ora ---
+    -
+        name: giorno_settimana   # Es: 'sabato', 'lunedì'
+        type: category
+    -
+        name: mese
+        type: category          # Categoria è meglio di numero per non creare una relazione lineare non esistente
+    -
+
+        name: fascia_oraria     # Es: 'pomeriggio', 'sera'
+        type: category
+    -
+        name: weekend            # Valore booleano (True/False)
+        type: binary
+    -
+        name: festivita          # Valore booleano (True/False)
+        type: category
+    -
+        name: stagione           # Es: 'inverno', 'estate'
+        type: category
+
+    # --- Features legate al film ---
+    -
+        name: title
+        type: category          # Tratta ogni titolo come una categoria distinta
+    -
+        name: genres
+        type: set               # 'set' è perfetto per gestire liste di generi (es: ['Action', 'Comedy'])
+    -
+        name: keywords
+        type: set               # Anche qui 'set' è ideale per le parole chiave
+    -
+        name: director
+        type: category
+    -
+        name: vote_average       # Media voti (numerico)
+        type: number
+    -
+        name: popularity         # Popolarità del film (numerico)
+        type: number
+
+    # --- Features legate al meteo ---
+    -
+        name: temp_max
+        type: number
+    -
+        name: temp_min
+        type: number
+    -
+        name: precip_mm
+        type: number
+        preprocessing:
+            missing_value_strategy: fill_with_const  # Se piove 0, vuol dire che non piove
+            fill_value: 0
+
+output_features:
+    -
+        name: total              # La nostra variabile target da prevedere
+        type: number

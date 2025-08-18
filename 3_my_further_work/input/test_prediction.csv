@@ -1,0 +1,2 @@
+date;time;title;full_price;reduced;free;total;datetime;giorno_settimana;mese;anno;ora;fascia_oraria;stagione;weekend;festivita;date_str;temp_max;temp_min;precip_mm;genres;keywords;cast;director;vote_average;popularity
+20/08/2025;20:30;Io Sono Nessuno 2;45;103;7;155;20/08/2025 20:30;sabato;8;2025;20;sera;estate;TRUE;Nessuna;20/08/2025;31.1;16.9;0;['Action', 'Crime','Comedy'];['assassin', 'sequel', 'revenge', 'dark comedy', 'one man army'];['Bob Odenkirk', 'Connie Nielsen'];Timo Tjahjanto;7.15;14.5201
