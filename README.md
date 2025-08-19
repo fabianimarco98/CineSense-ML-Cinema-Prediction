@@ -1,3 +1,10 @@
+<p align="center">
+  <img src="https://img.shields.io/badge/Language-Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Language: Python">
+  <img src="https://img.shields.io/badge/Library-Scikit_learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white" alt="Library: Scikit-learn">
+  <img src="https://img.shields.io/badge/Library-PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white" alt="Library: PyTorch">
+  <img src="https://img.shields.io/badge/Status-Learning_in_Progress-blueviolet?style=for-the-badge" alt="Status: Learning in Progress">
+</p>
+
 # Project CineSense: A Machine Learning Application
 
 This repository documents the development journey of CineSense, a machine learning project focused on predicting cinema attendance based on historical data and movie metadata collected via The Movie Database (TMDb) and weather APIs.
